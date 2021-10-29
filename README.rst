@@ -21,7 +21,7 @@ Run It
 
 ..
 
-Now use browser with url http://localhost:8085.
+Now use browser with url http://localhost:8085. You can use both mouse and keyboard number keys to select options.
 
 In order to stop container, do:
 
