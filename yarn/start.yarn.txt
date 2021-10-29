@@ -1,0 +1,139 @@
+title: HAG.Start
+---
+    // disable scene mode
+    <<hagSceneMode show=false>>
+
+    // start editing
+    [[DofStart]]
+===
+
+title: DofStart
+---
+    // initialization
+    <<set $manipImageExit to false>>
+    <<set $manipImagePdx to 0>>
+    <<set $manipImagePdy to 0>>
+    <<set $manipImageValue to 0>>
+
+    <<set $manipImagePathBackground to "img/background.png">>
+    <<set $manipImagePathForeground to "img/foreground.png">>
+    <<set $manipImagePathBase to "img/generated/result">>
+    <<set $manipImageCommand to "hagImage init path="{$manipImagePathBackground}"">>
+
+    // generate result image path (we need new one all the time to avoid browser caching)
+    <<set $manipImagePath to "{$manipImagePathBase}px{$manipImagePdx}py{$manipImagePdy}.png">>
+
+    // combine background and foreground
+    <<hagImage init path="{$manipImagePathBackground}" add path="{$manipImagePathForeground}" dst-pdx=$manipImagePdx dst-pdy=$manipImagePdy save path="{$manipImagePath}">>
+
+    // display on the screen
+    <<hagHighlightBlockSet type=image>>
+    <<hagHighlightBlockNoteAdd path="{$manipImagePath}"  style="room">>
+    <<hagHighlightBlocksShow center=true>>
+
+    // until exit
+    <<while not $manipImageExit>>
+
+        // main options
+        <<set $manipImageDirection to "">>
+
+        -> Up
+            <<set $manipImageDirection to "Up">>
+        -> Left
+            <<set $manipImageDirection to "Left">>
+        -> Right
+            <<set $manipImageDirection to "Right">>
+        -> Down
+            <<set $manipImageDirection to "Down">>
+        -> Stage
+            <<set $manipImageDirection to "Stage">>
+        -> Other Foreground
+            <<set $manipImageDirection to "Foreground">>
+        -> Exit
+            <<set $manipImageExit to true>>
+
+        // process results
+        <<if $manipImageDirection is "Foreground">>
+            // change background
+            -> [img]img/foreground.png[/img] Initial Foreground
+                <<set $manipImagePathForeground to "img/foreground.png">>
+                <<set $manipImagePathBase to "{$manipImagePathBase}i0">>
+            -> [img]img/foreground1.png[/img] Foreground 1
+                <<set $manipImagePathForeground to "img/foreground1.png">>
+                <<set $manipImagePathBase to "{$manipImagePathBase}i1">>
+            -> [img]img/foreground2.png[/img] Foreground 2
+                <<set $manipImagePathForeground to "img/foreground2.png">>
+                <<set $manipImagePathBase to "{$manipImagePathBase}i2">>
+            -> [img]img/foreground3.png[/img] Foreground 3
+                <<set $manipImagePathForeground to "img/foreground3.png">>
+                <<set $manipImagePathBase to "{$manipImagePathBase}i3">>
+            -> [img]img/foreground4.png[/img] Foreground 4
+                <<set $manipImagePathForeground to "img/foreground4.png">>
+                <<set $manipImagePathBase to "{$manipImagePathBase}i4">>
+            -> [img]img/foreground5.png[/img] Foreground 5
+                <<set $manipImagePathForeground to "img/foreground5.png">>
+                <<set $manipImagePathBase to "{$manipImagePathBase}i5">>
+
+            // generate result image path (we need new one all the time to avoid browser caching)
+            <<set $manipImagePath to "{$manipImagePathBase}px{$manipImagePdx}py{$manipImagePdy}.png">>
+
+            // combine background and foreground
+            <<hagImage init path="{$manipImagePathBackground}" add path="{$manipImagePathForeground}" dst-pdx=$manipImagePdx dst-pdy=$manipImagePdy save path="{$manipImagePath}">>
+
+            // display on the screen
+            <<hagHighlightBlockSet type=image>>
+            <<hagHighlightBlockNoteAdd path="{$manipImagePath}"  style="room">>
+            <<hagHighlightBlocksShow center=true>>
+
+
+        <<elseif $manipImageDirection is "Stage">>
+            // update final HaG command definition and output it
+            <<set $manipImageCommand to "{$manipImageCommand} add path="{$manipImagePathForeground}" pdx={$manipImagePdx} pdy={$manipImagePdy}">>
+            <[raw][/raw]<{$manipImageCommand}>>
+
+            // stage background and foreground as new background
+            <<set $manipImagePathBackground to "{$manipImagePath}">>
+            <<set $manipImagePathBase to "{$manipImagePathBase}px{$manipImagePdx}py{$manipImagePdy}">>
+        <<elseif not $manipImageExit>>
+            // ask for shift value in % from width or height
+            -> 1%
+                <<set $manipImageValue to 1>>
+            -> 5%
+                <<set $manipImageValue to 5>>
+            -> 10%
+                <<set $manipImageValue to 10>>
+
+            // process result
+            <<if $manipImageDirection is "Up">>
+                <<set $manipImagePdy to $manipImagePdy - $manipImageValue>>
+            <<elseif $manipImageDirection is "Left">>
+                <<set $manipImagePdx to $manipImagePdx - $manipImageValue>>
+            <<elseif $manipImageDirection is "Right">>
+                <<set $manipImagePdx to $manipImagePdx + $manipImageValue>>
+            <<elseif $manipImageDirection is "Down">>
+                <<set $manipImagePdy to $manipImagePdy + $manipImageValue>>
+            <<endif>>
+
+            // generate result image path
+            <<set $manipImagePath to "{$manipImagePathBase}px{$manipImagePdx}py{$manipImagePdy}.png">>
+
+            // combine background and foreground
+            <<hagImage init path="{$manipImagePathBackground}" add path="{$manipImagePathForeground}" dst-pdx=$manipImagePdx dst-pdy=$manipImagePdy save path="{$manipImagePath}">>
+
+            // display on the screen
+            <<hagHighlightBlockSet type=image>>
+            <<hagHighlightBlockNoteAdd path="{$manipImagePath}"  style="room">>
+            <<hagHighlightBlocksShow center=true>>
+        <<else>>
+            // update final HaG command definition
+            <<set $manipImageCommand to "{$manipImageCommand} add path="{$manipImagePathForeground}" pdx={$manipImagePdx} pdy={$manipImagePdy}">>
+        <<endif>>
+    <<endwhile>>
+
+    // display HaG command
+    <[raw][/raw]<{$manipImageCommand}>>
+
+    // start again with the same images
+    [[Again|DofStart]]
+===
+

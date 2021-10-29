@@ -1,0 +1,460 @@
+.interactiveContainer, .m-interactiveContainer {
+    background-color: #000;
+    border: 0px;
+    position: relative;
+}
+
+/*item container*/
+.optionsItemContainer, .m-optionsItemContainer {
+    padding: 0px !important;
+    margin: 0px !important;
+    min-height: 10ex;
+}
+
+/*item container*/
+.chatPhraseContainer, .m-chatPhraseContainer {
+    padding: 4px !important;
+    margin: 0px !important;
+}
+
+/*option interactive text block*/
+.optionsItem, .chatShortcut {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #319631;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #319631;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.m-optionsItem, .m-chatShortcut {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #319631;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #319631;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+
+/*options block represented as chat*/
+.chatPlayerPhrase {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #319631;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #319631;
+    font-weight: bold;
+    font-size: x-large;
+    border-radius: 10px 5px 10px 70px;
+}
+
+.m-chatPlayerPhrase {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #319631;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #319631;
+    font-weight: bold;
+    font-size: xxx-large;
+    border-radius: 10px 5px 10px 70px;
+}
+
+/*options block*/
+.optionsContainer, .m-optionsContainer {
+    background-color: #000;
+    padding: 3px;
+    border: 1px solid #319631;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #319631;
+    font-weight: bold;
+    min-width: 20%;
+}
+
+.chatTellerImage {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.m-chatTellerImage {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.chatInlineImage, .m-chatInlineImage {
+    max-height: 16px;
+    max-width: 16px;
+}
+
+.chatStoryPhrase, .chatTellerPhrase {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #2fa6a2;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #2fa6a2;
+    /*color: rgba(255,255,255,1);*/
+    font-weight: bold;
+    font-size: x-large;
+    border-radius: 5px 10px 70px 10px;
+}
+
+.m-chatStoryPhrase, .m-chatTellerPhrase {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #2fa6a2;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #2fa6a2;
+    /*color: rgba(255,255,255,1);*/
+    font-weight: bold;
+    font-size: xxx-large;
+    border-radius: 5px 10px 70px 10px;
+}
+
+
+.chatSavePointPhrase, .chatSavePointPhrase, .m-chatSavePointPhrase, .m-chatSavePointPhrase  {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #ffffff;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #ffffff;
+    /*color: rgba(255,255,255,1);*/
+    font-weight: bold;
+    border-radius: 5px 10px 70px 10px;
+}
+
+.chatTellerName {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #2fa6a2;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #2fa6a2;
+    font-weight: bold;
+    font-size: x-large;
+    max-width: 100px;
+}
+
+.m-chatTellerName {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #2fa6a2;
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    color: #2fa6a2;
+    font-weight: bold;
+    font-size: xxx-large;
+    max-width: 200px;
+}
+
+.chatBlocksContainer, .m-chatBlocksContainer {
+    padding: 0px !important;
+    margin: 0px !important;
+    border: 0px;
+}
+
+.chatBlockDebugContainer, .m-chatBlockDebugContainer {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid white;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    font-weight: bold;
+    max-width: 30%;
+}
+
+.chatBlockValueContainer {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #cbaf20;
+    border-radius: 10px 10px 10px 10px;
+    color: #cbaf20;
+    font-weight: bold;
+    font-size: x-large;
+    max-width: 30%;
+}
+
+.m-chatBlockValueContainer {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #cbaf20;
+    border-radius: 10px 10px 10px 10px;
+    color: #cbaf20;
+    font-weight: bold;
+    font-size: x-large;
+    max-width: 30%;
+}
+
+.chatBlockValue, .m-chatBlockValue {
+    /*border: 1px solid #cbaf20;*/
+    color: #cbaf20;
+    font-weight: bold;
+}
+
+.chatBlockValueText, .m-chatBlockValueText {
+    color: white;
+    font-weight: normal;
+}
+
+.chatBlockValueIcon, .m-chatBlockValueIcon {
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 16px;
+    max-width: 16px;
+}
+
+.chatBlockValueProgressBar, .m-chatBlockValueProgressBar {
+    padding: 3px !important;
+    margin: 4px !important;
+    /*background-color: #252a2b;*/
+    border: 1px solid #cbaf20;
+    border-radius: 5px 5px 5px 5px;
+    min-width: 30px;
+}
+
+.chatBlockValueProgress, .m-chatBlockValueProgress {
+    padding: 3px !important;
+    margin: 0px !important;
+    background-color: #cbaf20;
+    flex: 0 0 auto !important;
+}
+
+.chatBlockInfoContainer {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #2fa6a2;
+    border-radius: 10px 10px 10px 10px;
+    color: #2fa6a2;
+    font-weight: bold;
+    font-size: x-large;
+    max-width: 30%;
+}
+
+.m-chatBlockInfoContainer {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #2fa6a2;
+    border-radius: 10px 10px 10px 10px;
+    color: #2fa6a2;
+    font-weight: bold;
+    font-size: xx-large;
+    max-width: 30%;
+}
+
+.chatBlockErrorContainer, .m-chatBlockErrorContainer {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #ec2929;
+    border-radius: 10px 10px 10px 10px;
+    color: #ec2929;
+    font-weight: bold;
+    max-width: 30%;
+}
+
+.chatBlockImageContainer {
+    padding: 3px !important;
+    margin: 0px !important;
+    color: #f954eb;
+    font-weight: bold;
+    font-size: x-large;
+    max-width: 30%;
+}
+
+.m-chatBlockImageContainer {
+    padding: 3px !important;
+    margin: 0px !important;
+    color: #f954eb;
+    font-weight: bold;
+    font-size: xx-large;
+    max-width: 30%;
+}
+
+.chatBlockImage {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 100px;
+    max-width: 100px;
+    border: 1px solid #f954eb;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.m-chatBlockImage {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 200px;
+    max-width: 200px;
+    border: 1px solid #f954eb;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.chatBlockImage_room {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 100px;
+    max-width: 50px;
+    border: 1px solid #000000;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.m-chatBlockImage_room {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 400px;
+    max-width: 200px;
+    border: 1px solid #000000;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.chatBlockClickableImage {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 100px;
+    max-width: 100px;
+    /*border: 1px solid #f954eb;*/
+    border: inset;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.m-chatBlockClickableImage {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 200px;
+    max-width: 200px;
+    /*border: 1px solid #f954eb;*/
+    border: inset;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.chatBlockClickableImage_room {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 100px;
+    max-width: 50px;
+    /*border: 1px solid #f954eb;*/
+    border: inset;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.m-chatBlockClickableImage_room {
+    background-color: #252a2b;
+    padding: 3px !important;
+    margin: 0px !important;
+    max-height: 400px;
+    max-width: 200px;
+    /*border: 1px solid #f954eb;*/
+    border: inset;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.chatBlockVideoContainer, .m-chatBlockVideoContainer {
+    background-color: #252a2b;
+    padding: 3px;
+    border: 1px solid #f954eb;
+    border-radius: 10px 10px 10px 10px;
+    color: #f954eb;
+    font-weight: bold;
+    max-width: 30%;
+}
+
+.sceneContainer, .m-sceneContainer {
+    background-color: #000;
+    padding: 0px;
+    border: 0px;
+    /*border: 1px solid red;*/
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+
+.sceneTeller, .m-sceneTeller {
+    /*border: 1px solid white;*/
+    border: 0px;
+    position: relative;
+    z-index: 3;
+    /*margin-top: auto !important; if needed bottom*/
+    overflow: visible !important;
+}
+
+.sceneTellerImage, .m-sceneTellerImage {
+    border: 5px solid white;
+}
+
+.sceneBackground, .m-sceneBackground {
+    padding: 0px !important;
+    margin: 0px !important;
+    border: 0px;
+    /*border: 1px solid red;*/
+    /*margin-top: 1ex;*/
+    display: -webkit-inline-box !important;
+}
+
+.sceneBackgroundImage, .m-sceneBackgroundImage {
+    padding: 0px !important;
+    margin: 0px !important;
+    position: relative;
+    z-index: 2;
+    top: 0px;
+}
+
+.sceneBackgroundImageWithTeller, .m-sceneBackgroundImageWithTeller {
+    padding: 0px !important;
+    margin: 0px !important;
+    position: relative;
+    z-index: 2;
+    top: 0px;
+    left: -210px;
+}
+
+/*scene story or phrase*/
+.scenePhrase, .m-scenePhrase {
+    /*border: 1px solid #0f0;*/
+    min-height: 30px;
+    padding: 3px;
+    position: relative;
+    z-index: 10;
+    bottom: 35%;
+    display:inline-block;
+}
+
+.scenePhraseText {
+    background-color: rgba(37,42,43,0.8); /* background-color: #252a2b; */
+    color: rgba(255,255,255,1);
+    min-height: 30px;
+    text-align: center;
+    padding: 3px;
+    z-index: 10;
+    font-size: xx-large;
+}
+
+.m-scenePhraseText {
+    background-color: rgba(37,42,43,0.8); /* background-color: #252a2b; */
+    color: rgba(255,255,255,1);
+    min-height: 30px;
+    text-align: center;
+    padding: 3px;
+    z-index: 10;
+    font-size: xxx-large;
+}
+
+.sceneInlineImage, .m-sceneInlineImage {
+    max-height: 48px;
+    max-width: 48px;
+}
+
